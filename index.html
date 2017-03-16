@@ -1,0 +1,86 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="robots" content="noindex">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Reactive X Users</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="css/users.css" rel="stylesheet" type="text/css" />
+    <script src="https://unpkg.com/@reactivex/rxjs@5.0.3/dist/global/Rx.js"></script>
+    <script src="https://unpkg.com/moment@2.17.1"></script>
+  </head>
+  <body>
+    <section class="container">
+      <header class="col-xs-12">
+        <h1>User</h1>
+        <select class="form-control" id="user"></select>
+        <hr>
+      </header>
+      <fieldset id="form" disabled="disabled" class="col-xs-12">
+        <div class="row">
+          <div class="col-xs-4">
+            <div class="form-group">
+              <label for="firstname">Firstname</label>
+              <input type="text" class="form-control" maxlength="20" type="text" id="firstname" placeholder="Firstname">
+            </div>
+          </div>
+          <div class="col-xs-4">
+            <div class="form-group">
+              <label for="lastname">Lastname</label>
+              <input type="text" class="form-control" maxlength="20" type="text" id="lastname" placeholder="Lastname">
+            </div>
+          </div>
+          <div class="col-xs-4">
+            <div class="form-group">
+              <label for="gender">Gender</label>
+              <div class="col-xs-12">
+                <div class="radio-inline">
+                   <label for="female">
+                     <input id="female" name="gender" type="radio" value="F"> Female
+                   </label>
+                 </div>
+                 <div class="radio-inline">
+                    <label for="male">
+                      <input id="male" name="gender" type="radio" value="M"> Male
+                    </label>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-2">
+            <div class="form-group">
+              <label for="age">Age</label>
+              <input type="text" class="form-control" max="110" min="1" type="number" id="age" placeholder="Age">
+            </div>
+          </div>
+          <div class="col-xs-4">
+            <div class="form-group">
+              <label for="registered">Registered</label>
+              <input type="date" class="form-control" id="registered" placeholder="Registered">
+            </div>
+          </div>
+          <div class="col-xs-6">
+            <div class="form-group">
+              <label for="country">Country</label>
+              <select class="form-control" id="country"></select>
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="location">Location</label>
+          <img class="map" id="location"></img>
+        </div>
+        <hr>
+        <pre id="saved"></pre>
+      </fieldset>
+    </section>
+    <script src="js/utils.js"></script>
+    <script src="js/countries.js"></script>
+    <script src="js/users.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
